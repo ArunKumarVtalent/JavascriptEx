@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo Page 4</title>
+        <link href="{% static 'css/MyStyles.css' %}" rel="stylesheet" type="text/css"> 
+        <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                alert("Welcome to Demo 4 Page!");
+            });
+        </script>      
+    </head>
+    <body>
+       <div>
+            <h1>Demo 4 Page</h1>
+       </div>
+       <hr/>
+       <div>
+            <input id="btnClickMe" name="btnClickMe" type="button" value="Click Me" class="btn btn-primary"/>
+       </div>
+       <hr/>
+       <div>
+            <input type="button" value="Double Click Me" class="btn btn-danger"/>
+       </div>
+        <hr/>
+       <div>
+            <input type="button" value="Move mouse over and out on me" class="btn btn-warning"/>
+       </div>
+       <hr/>
+       <div class="row">
+        <div class="col-sm-2">
+            <span style="font-weight: bold;">Enter Your Name :</span>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" placeholder="Enter your name" class="form-control"/>
+        </div>
+       </div>
+       <hr/>
+       <div class="row">
+        <div class="col-sm-2">
+            <span style="font-weight: bold;">Select Course :</span>
+        </div>
+        <div class="col-sm-3">
+            <select class="form-control">
+                <option value="Select Course">-Select Course-</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="C#">C#</option>
+                <option value="PHP">PHP</option>
+            </select>
+        </div>
+       </div>
+    </body>
+</html>

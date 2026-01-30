@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo Page</title>
+        <link href="{% static 'css/MyStyles.css' %}" rel="stylesheet" type="text/css">
+        <style>
+            body {               
+                background-color: lightgray;
+            }
+        </style>
+        <script src="{% static 'js/MyScripts.js' %}" type="text/javascript"></script>
+        <!-- Internal Javascript -->
+        <!-- <script type="text/javascript">
+            function showAlert() {
+                alert("Welcome to the Demo Page!");
+            }
+        </script> -->
+    </head>
+    <body onload="showAlert()">
+        <h1 style="color:red;">Welcome to the Demo Page</h1>
+        <div class="DivStyle">This is a simple HTML page for demonstration purposes.</div>
+    </body>
+</html>

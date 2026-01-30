@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo 2 Page</title>
+        <script>
+            function Demo(){
+                // Variables : var, let, const
+                var a = 10;
+                console.log("a valus is : " + a);
+                a = 15.3;
+                console.log("a valus is : " + a);
+                a = "Hello";
+                console.log("a valus is : " + a);
+                let b = 20;
+                console.log("b valus is : " + b);
+                b = 25.5;
+                console.log("b valus is : " + b);
+                b = "Welcome";
+                console.log("b valus is : " + b);
+                const c = 30;
+                console.log("c valus is : " + c);
+                // We cannot change the value of const variable
+                // c = 35.5; // Error
+                // console.log("c valus is : " + c);
+                // c = "Hi"; // Error
+                // console.log("c valus is : " + c);
+            }
+
+            function Demo3(){
+                var x = 5;
+                console.log("Value of x before block: " + x);
+
+                {
+                    let x = 10; // Not Same variable
+                    console.log("Value of x inside block: " + x);
+                }
+
+                console.log("Value of x after block: " + x);
+            }
+
+            function Demo2(){
+                // Data Types : Number, String, Boolean, Object, Undefined, Null
+                let num = 100; // Number
+                let str = "JavaScript"; // String
+                let bool = true; // Boolean
+
+                let arr = []; // Empty Array
+                arr = [1,2,3,4,5]; // Array
+                let names = []; // Empty Array
+                names = ["Alice", "Bob", "Charlie"]; // String Array
+                let arr2 = []; // Empty Array
+                arr2 = ["Hello", 10, true]; // Mixed Array
+
+                // (JSON - JavaScript Object Notation - Key and Value Pairs)
+                let obj = {}; // Empty Object
+                obj = {name: "John", age: 30}; // Object 
+
+                let dept1 = {}; // Empty Object
+                dept1 = {deptno: 10, dname: "Manager", location: "Hyderabad"}; // Object
+
+                let dept2 = {}; // Empty Object
+                dept2 = {deptno: 20, dname: "Sales", location: "Mumbai"}; // Object
+
+                let dept3 = {}; // Empty Object
+                dept3 = {deptno: 30, dname: "IT", location: "Bangalore"}; // Object
+
+                let deptList = []; // Empty Array
+                deptList = [dept1, dept2, dept3]; // Array of Objects
+
+                let emp1 = {}; // Empty Object
+                emp1 = {empid: 1001, ename: "David", gender:"Male", salary: 50000, deptNo: 10}; // Object
+
+                let emp2 = {}; // Empty Object
+                emp2 = {empid: 1002, ename: "John", gender:"Male", salary: 60000, deptNo: 20}; // Object
+
+                let emp3 = {}; // Empty Object
+                emp3 = {empid: 1003, ename: "Jane", gender:"Female", salary: 70000, deptNo: 30}; // Object
+
+                let empList = []; // Empty Array
+                empList = [emp1, emp2, emp3]; // Array of Objects
+
+                let undef; // Undefined
+                let nll = null; // Null
+
+                console.log("Number: " + num);
+                console.log("String: " + str);
+                console.log("Boolean: " + bool);
+
+                console.log("Array: " + arr);
+                console.log("String Array: " + names);
+                console.log("Mixed Array: " + arr2);
+
+                console.log("Object: " + obj);
+                console.log("Department List: " + deptList);
+                console.log("Employee List: " + empList);
+            
+                console.log("Object: " + JSON.stringify(obj));
+                console.log("Department List: " + JSON.stringify(deptList));
+                console.log("Employee List: " + JSON.stringify(empList));
+
+                console.log("Undefined: " + undef);
+                console.log("Null: " + nll);
+            }
+        </script>
+    </head>
+    <body onload="Demo2()">
+        
+    </body>
+</html>
