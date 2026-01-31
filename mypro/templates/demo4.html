@@ -7,11 +7,7 @@
         <title>Demo Page 4</title>
         <link href="{% static 'css/MyStyles.css' %}" rel="stylesheet" type="text/css"> 
         <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css">
-        <script type="text/javascript">
-            document.addEventListener('DOMContentLoaded', function() {
-                alert("Welcome to Demo 4 Page!");
-            });
-        </script>      
+        <script type="text/javascript" src="{% static 'js/demo4.js' %}"></script>      
     </head>
     <body>
        <div>
@@ -20,14 +16,17 @@
        <hr/>
        <div>
             <input id="btnClickMe" name="btnClickMe" type="button" value="Click Me" class="btn btn-primary"/>
+            <input id="btnAdd" name="btnAdd" type="button" value="Add" class="btn btn-primary"/>
        </div>
        <hr/>
        <div>
-            <input type="button" value="Double Click Me" class="btn btn-danger"/>
-       </div>
-        <hr/>
+            <input id="btnA" name="btn2" type="button" value="Double Click Me" class="btn btn-danger"/>
+            <input id="btnB" name="btn2" type="button" value="Double Click Me" class="btn btn-danger"/>
+       </div>      
+       <hr/>
        <div>
-            <input type="button" value="Move mouse over and out on me" class="btn btn-warning"/>
+            <input type="button" value="Move mouse over and out on me" class="classA btn btn-warning"/>
+            <input type="button" value="Move mouse over and out on me" class="classA btn btn-warning"/>
        </div>
        <hr/>
        <div class="row">
@@ -35,7 +34,7 @@
             <span style="font-weight: bold;">Enter Your Name :</span>
         </div>
         <div class="col-sm-3">
-            <input type="text" placeholder="Enter your name" class="form-control"/>
+            <input id="txt1" type="text" placeholder="Enter your name" class="form-control"/>
         </div>
        </div>
        <hr/>
@@ -44,7 +43,7 @@
             <span style="font-weight: bold;">Select Course :</span>
         </div>
         <div class="col-sm-3">
-            <select class="form-control">
+            <select id="ddlCourse" class="form-control">
                 <option value="Select Course">-Select Course-</option>
                 <option value="Python">Python</option>
                 <option value="Java">Java</option>
@@ -53,6 +52,21 @@
                 <option value="PHP">PHP</option>
             </select>
         </div>
+       </div>
+       <hr/>
+       <div>
+            <span>Hello...!</span>
+            <span>Hai...!</span>
+            <span>Bye...!</span>
+       </div>
+        <hr/>
+       <div>
+            <h1 id="Greet">Welcome</h1>
+       </div>
+        <hr/>
+       <div>
+            <h2 class="message">My Wolrd</h2>
+            <h2 class="message">my world</h2>
        </div>
     </body>
 </html>

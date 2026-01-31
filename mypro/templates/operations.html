@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo Page</title>
+        <link href="{% static 'css/MyStyles.css' %}" rel="stylesheet" type="text/css">  
+        <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css">  
+        <script type="text/javascript">  
+            document.addEventListener('DOMContentLoaded', function(){
+               
+               function Validation(a, b){
+                 if(isNaN(a)){
+                     alert("Please enter valid numeric value for a.");
+                     return false;
+                 }
+
+                 if(isNaN(b)){
+                     alert("Please enter valid numeric value for b.");
+                     return false;
+                 }
+
+                 return true;
+               }
+
+               function add(a, b) {
+                   return a + b;
+               }
+
+               document.getElementById("btnAdd").addEventListener("click", function(){
+                   var a = parseInt(document.getElementById("txtAVal").value);
+                   var b = parseInt(document.getElementById("txtBVal").value);
+                    if(Validation(a, b)){
+                       var result = add(a, b);
+                       document.getElementById("lblResult").innerText = "Result : " + result;
+                    }                   
+               });
+
+               function subtract(a, b) {
+                   return a - b;
+               }
+
+               document.getElementById("btnSub").addEventListener("click", function(){
+                   var a = parseInt(document.getElementById("txtAVal").value);
+                   var b = parseInt(document.getElementById("txtBVal").value);
+                    if(Validation(a, b)){
+                       var result = subtract(a, b);
+                       document.getElementById("lblResult").innerText = "Result : " + result;
+                    }                   
+               });
+
+                function multiply(a, b) {
+                     return a * b;
+                }
+                document.getElementById("btnMul").addEventListener("click", function(){
+                    var a = parseInt(document.getElementById("txtAVal").value);
+                    var b = parseInt(document.getElementById("txtBVal").value);
+                     if(Validation(a, b)){
+                        var result = multiply(a, b);
+                        document.getElementById("lblResult").innerText = "Result : " + result;
+                     }
+
+                });
+
+                function divide(a, b) {
+                     return a / b;
+                }
+                document.getElementById("btnDiv").addEventListener("click", function(){
+                    var a = parseInt(document.getElementById("txtAVal").value);
+                    var b = parseInt(document.getElementById("txtBVal").value);
+                     if(Validation(a, b)){
+                        var result = divide(a, b);
+                        document.getElementById("lblResult").innerText = "Result : " + result;
+                     }
+
+                });
+
+                function remainder(a, b) {
+                     return a % b;
+                }
+                document.getElementById("btnRem").addEventListener("click", function(){
+                    var a = parseInt(document.getElementById("txtAVal").value);
+                    var b = parseInt(document.getElementById("txtBVal").value);
+                     if(Validation(a, b)){
+                        var result = remainder(a, b);
+                        document.getElementById("lblResult").innerText = "Result : " + result;
+                     }
+
+                });
+            });
+        </script>    
+    </head>
+    <body>
+        <div class="row" style="text-align: center;color: red;background-color: yellow;margin-bottom: 20px;">
+            <div class="col-sm-12">
+                <h1>Operations</h1>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 10px;">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2"><h3>Enter a value </h3></div>
+            <div class="col-sm-3">
+                <input type="text" id="txtAVal" name="txtAVal" placeholder="Enter a value...!" class="form-control"/>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="row" style="margin-bottom: 10px;">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2"><h3>Enter b value </h3></div>
+            <div class="col-sm-3">
+                <input type="text" id="txtBVal" name="txtBVal" placeholder="Enter b value...!" class="form-control"/>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="row" style="margin-bottom: 10px;text-align: center;">
+            <div class="col-sm-12">
+                <input type="button" id="btnAdd" name="btnAdd" value="Add" class="btn btn-primary"/>
+                <input type="button" id="btnSub" name="btnSub" value="Subtract" class="btn btn-danger"/>
+                <input type="button" id="btnMul" name="btnMul" value="Multiply" class="btn btn-success"/>
+                <input type="button" id="btnDiv" name="btnDiv" value="Divide" class="btn btn-info"/>
+                <input type="button" id="btnRem" name="btnRem" value="Remainder" class="btn btn-warning"/>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-sm-12" style="text-align: center;">
+                <h2 id="lblResult" name="lblResult" style="color: green;">Result : </h2>
+            </div>
+        </div>
+    </body>
+</html>

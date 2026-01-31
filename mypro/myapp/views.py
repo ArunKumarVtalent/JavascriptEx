@@ -12,3 +12,6 @@ def demo3(request):
 
 def demo4(request):
     return render(request, 'demo4.html')
+
+def operations(request):
+    return render(request, 'operations.html')   
